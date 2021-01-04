@@ -1,1 +1,1 @@
-# Password_generator
+Simple random password generator
