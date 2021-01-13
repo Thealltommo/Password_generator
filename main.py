@@ -14,7 +14,7 @@ ch_symbols = ""
 ch_numbers = ""
 
 for c in range(nr_letters):
-  ch_letters += random.choice(letters)
+  ch_letters += random.choice(letters) #  select random choice of letters from user input
   
 for s in range(nr_symbols):
   ch_symbols += random.choice(symbols)
@@ -22,12 +22,12 @@ for s in range(nr_symbols):
 for n in range(nr_numbers):
   ch_numbers += random.choice(numbers)
 
-password = (ch_letters + ch_symbols + ch_numbers)
+password = (ch_letters + ch_symbols + ch_numbers) #  password
 
 print(f"Your password is  \n{password}")
 
-password = list(password)
+password = list(password) #  make password a list so it can be shuffled as str not supported by .shuffle
 
-random.shuffle(password)
+random.shuffle(password) #  shuffle password around for higher difficulty
 password = "".join(password)
 print(password)
